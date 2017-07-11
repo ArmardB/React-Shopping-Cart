@@ -29,10 +29,10 @@ class Coursesales extends Component {
 
     return(
       <div>
-        <h2>You can buy courses: </h2>
+        <h4>Select from our great courses below: </h4>
         <div id="courses">
           {courses}
-          <p id="total">Total: <strong>{this.state.total}</strong></p>
+          <p id="total">Total: <strong>${this.state.total}</strong></p>
         </div>
       </div>
     );

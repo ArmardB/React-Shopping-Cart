@@ -12,14 +12,16 @@ class Course extends Component {
   }
 
   clickedTitle() {
-
+    let active = !this.state.active;
+    this.setState({active: active});
+    this.props.sumPrice(active ? this.props.price: -this.props.price);
   }
   render(){
     return(
       <div>
-        <p onClick={this.clickedTitle}>
+        <p className={this.state.active ? "active":""} onClick={this.clickedTitle}>
           {this.props.name}
-          <strong>{this.props.price}</strong>
+          <strong>${this.props.price}</strong>
         </p>
       </div>
     );
