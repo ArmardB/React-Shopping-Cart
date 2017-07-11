@@ -2,9 +2,10 @@ import React, {Component} from 'react';
 
 class Coursesales extends Component {
   render(){
-    return(
+    console.log(this.props.items)
+    return(      
       <div>
-        
+        <p>From course sales</p>
       </div>
     );
   }
